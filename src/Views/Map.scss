@@ -1,0 +1,45 @@
+@import './ScssVars.scss';
+#map {
+  position: relative;
+  margin: auto;
+  width: $blockSize * 21;
+  height: $blockSize * 21;
+  overflow: hidden;
+  white-space: nowrap;
+  #full-map {
+    position: relative;
+    transition: left 0.5s, top 0.5s;
+  }
+  .block {
+    width: $blockSize;
+    height: $blockSize;
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    // overflow: hidden;
+    // box-sizing: border-box;
+  }
+  .unit {
+    position: absolute;
+    width: $blockSize;
+    height: $blockSize;
+    &.__grid {
+      z-index: 498;
+      box-sizing: border-box;
+      border: 1px solid lightgray;
+    }
+  }
+  .row {
+    display: block;
+    margin: 0;
+    height: $blockSize;
+  }
+  .current-block {
+    border: 2px solid orange;
+    z-index: 498;
+    box-sizing: border-box;
+    &.editing {
+      border-color: orangered;
+    }
+  }
+}

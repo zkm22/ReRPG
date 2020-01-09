@@ -1,0 +1,122 @@
+#figure {
+  position: absolute;
+  z-index: 500;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: left 0.5s ease-in-out, top 0.5s ease-in-out;
+  pointer-events: none;
+  .round {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    border: 1px solid lightgray;
+    background: lightyellow;
+    position: relative;
+    z-index: 10;
+    // animation: moveAnimation 0.5s;
+    &.run1 {
+      animation: mainMoveAnimation 0.5s;
+    }
+    &.run0 {
+      animation: mainMoveAnimation2 0.5s;
+    }
+  }
+  .shadow {
+    width: 18px;
+    height: 8px;
+    background: radial-gradient(#777777, #888888);
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    z-index: 1;
+    &.run1 {
+      animation: shadowMoveAnimation 0.5s;
+    }
+    &.run0 {
+      animation: shadowMoveAnimation 0.5s;
+    }
+  }
+}
+// @keyframes moveAnimation {
+//   from {
+//     // width: 16px;
+//     // height: 16px;
+//   }
+//   25% {
+//     transform: scaleX(0.5) scaleY(1.5);
+//     // width: 8px;
+//     // height: 24px;
+//   }
+//   75% {
+//     transform: scaleX(1.3) scaleY(0.5);
+//     // width: 24px;
+//     // height: 8px;
+//   }
+//   to {
+//     // width: 16px;
+//     // height: 16px;
+//   }
+// }
+@keyframes mainMoveAnimation {
+  0% {
+    top: 0;
+  }
+  25% {
+    transform: scaleX(0.7) scaleY(1.3);
+  }
+  50% {
+    top: -15px;
+  }
+  75% {
+    transform: scaleX(0.7) scaleY(1.3);
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes mainMoveAnimation2 {
+  0% {
+    top: 0;
+  }
+  25% {
+    transform: scaleX(0.7) scaleY(1.3);
+  }
+  50% {
+    top: -15px;
+  }
+  75% {
+    transform: scaleX(0.7) scaleY(1.3);
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes shadowMoveAnimation {
+  0% {
+  }
+  25% {
+  }
+  50% {
+    transform: scaleX(0.6);
+  }
+  75% {
+  }
+  100% {
+  }
+}
+@keyframes shadowMoveAnimation2 {
+  0% {
+  }
+  25% {
+  }
+  50% {
+    transform: scaleX(0.6);
+  }
+  75% {
+  }
+  100% {
+  }
+}
